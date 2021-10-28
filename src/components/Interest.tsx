@@ -5,15 +5,27 @@ import { useSelector } from "react-redux";
 import { RootState } from "../state/store";
 
 export const Interest: React.FC = () => {
-  const interest = useSelector((state: RootState) => state.total_interest.interest);
+  const interest = useSelector(
+    (state: RootState) => state.total_interest.interest
+  );
+
+  const amountInUsd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(interest);
 
   console.log(interest);
 
-  return <>{interest && <Result>{interest}</Result>}</>;
+  return (
+    <>
+      {interest !== 0 && (
+        <Wrapper>
+          <Result>{amountInUsd}</Result>
+        </Wrapper>
+      )}
+    </>
+  );
 };
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  text-align: center;
+  margin: 4rem;
 `;
 
 const Result = styled.h3`

@@ -8,7 +8,7 @@ export const newInterestAction = (
 ) => {
   return {
     type: ActionType.TOTAL_INTEREST,
-    payload: { principal, rate, years, interest: interest },
+    payload: { principal, rate, years, interest },
   };
 };
 

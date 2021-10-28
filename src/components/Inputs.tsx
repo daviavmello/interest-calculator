@@ -16,6 +16,8 @@ export const Inputs: React.FC = () => {
     if (principal && rate && years) {
       const interestFormula = principal * (1 + rate * years);
       interestAction(principal, rate, years, interestFormula);
+    } else {
+      interestAction(0, 0, 0, 0);
     }
   }, [dispatch, interestAction, principal, rate, years]);
 
@@ -28,7 +30,7 @@ export const Inputs: React.FC = () => {
       />
       <Input
         type="number"
-        placeholder="rate"
+        placeholder="rate (in %)"
         onChange={(e) => setRate(Number(e.target.value))}
       />
       <Input
