@@ -1,9 +1,9 @@
-import { ActionType } from "../variables";
+import { ActionType } from "./variables";
 
-export const newMessageAction = (msgUpdate: string, id: string) => {
+export const newInterestAction = (id: string, interest: string) => {
   return {
-    type: ActionType.SEND_MESSAGE,
-    payload: { id, message: msgUpdate },
+    type: ActionType.TOTAL_INTEREST,
+    payload: { id, total_interest: interest },
   };
 };
 
@@ -11,5 +11,6 @@ export type Action = {
   type: string;
   payload: {
     id: string;
-    message: string;
+    total_interest: number;
   };
+};

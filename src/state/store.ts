@@ -1,9 +1,9 @@
 import { createStore } from "redux";
-import { chatReducer } from "./Reducer";
+import { interestReducer } from "./Reducer";
 import { combineReducers } from "redux";
 
 export const rootReducer = combineReducers({
-  message: chatReducer,
+  total_interest: interestReducer,
 });
 
 export const store = createStore(rootReducer);
