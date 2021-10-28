@@ -1,22 +1,33 @@
 import { ActionType } from "./variables";
 import { Action } from "./InterestAction";
 
-// NOT BEING USED
-export interface IChat {
-  chat: [];
+interface IInterest {
+  principal: number;
+  rate: number;
+  years: number;
+  interest: number;
 }
 
-// Define the initial state using that type
-const initialState: Array<string> = [];
+const initialState: {
+  principal: number;
+  rate: number;
+  years: number;
+  interest: number;
+} = {} as IInterest;
 
 export const interestReducer = (state = initialState, action: Action) => {
-  const id = action.payload?.id;
-  const interest = action.payload?.total_interest;
-  console.log(`Reducer total_interest: ${interest} id: ${id}`);
+  const principal = action.payload?.principal;
+  const rate = action.payload?.rate;
+  const years = action.payload?.years;
+  const interest = action.payload?.interest;
+
+  console.log(
+    `Reducer\nprincipal: ${principal}, rate: ${rate}, years: ${years}, interest: ${interest}`
+  );
 
   switch (action.type) {
     case ActionType.TOTAL_INTEREST:
-      return { id, interest };
+      return { principal, rate, years, interest };
     default:
       return state;
   }

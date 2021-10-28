@@ -1,16 +1,23 @@
 import { ActionType } from "./variables";
 
-export const newInterestAction = (id: string, interest: string) => {
+export const newInterestAction = (
+  principal: number,
+  rate: number,
+  years: number,
+  interest: number
+) => {
   return {
     type: ActionType.TOTAL_INTEREST,
-    payload: { id, total_interest: interest },
+    payload: { principal, rate, years, interest: interest },
   };
 };
 
 export type Action = {
   type: string;
   payload: {
-    id: string;
-    total_interest: number;
+    principal: number;
+    rate: number;
+    years: number;
+    interest: number;
   };
 };

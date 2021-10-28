@@ -1,6 +1,12 @@
-import React from "react";
-import "./App.css";
+import React, { Fragment } from "react";
+import { Inputs } from "./components/Inputs";
+import { Interest } from "./components/Interest";
 
-export const App: React.FC = () => {
-  return <></>;
-};
+const App: React.FC = () => (
+  <Fragment>
+    <Inputs />
+    <Interest />
+  </Fragment>
+);
+
+export default App;
