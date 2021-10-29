@@ -30,7 +30,7 @@ export const Inputs: React.FC = () => {
       />
       <Input
         type="number"
-        placeholder="rate (in %)"
+        placeholder="rate (%)"
         onChange={(e) => setRate(Number(e.target.value))}
       />
       <Input
@@ -45,5 +45,7 @@ export const Inputs: React.FC = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
+  gap: 5%;
 `;
 const Input = styled.input``;

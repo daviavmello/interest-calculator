@@ -11,8 +11,6 @@ export const Interest: React.FC = () => {
 
   const amountInUsd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(interest);
 
-  console.log(interest);
-
   return (
     <>
       {interest !== 0 && (

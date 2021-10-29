@@ -10,8 +10,8 @@ html {
   background: ${colors.primary};
 h1 {
   font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  color: ${colors.light};
+  text-transform: capitalize;
+  color: ${colors.medium};
   margin: 0;
 }
 
@@ -26,8 +26,10 @@ input {
   color: ${colors.secondary};
   border: 0;
   border-bottom: 1px solid ${colors.medium};
+  margin: 2rem 0;
   padding: 0.5rem 0;
   font-size: 1rem;
+  flex: 1 1 calc(33.33% - 2rem);
   ::placeholder {
     color: ${colors.medium};
     text-transform: capitalize;
