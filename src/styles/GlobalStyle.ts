@@ -47,6 +47,9 @@ input {
     html {
       margin: 1rem;
     }
+    h3 {
+      font-size: 3rem;
+    }
 } 
 
 /* Medium devices (tablets, 768px and up) */
@@ -54,12 +57,18 @@ input {
     html {
       margin: 2rem;
     }
+    h3 {
+      font-size: 4rem;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     html {
       margin: 2rem 10vw;
+    }
+    h3 {
+      font-size: 6rem;
     }
 }
 `;

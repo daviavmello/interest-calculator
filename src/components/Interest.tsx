@@ -15,7 +15,7 @@ export const Interest: React.FC = () => {
     <>
       {interest !== 0 && (
         <Wrapper>
-          <Result>{amountInUsd}</Result>
+          <h3>{amountInUsd}</h3>
         </Wrapper>
       )}
     </>
@@ -24,8 +24,4 @@ export const Interest: React.FC = () => {
 const Wrapper = styled.div`
   text-align: center;
   margin: 4rem;
-`;
-
-const Result = styled.h3`
-  font-size: 6rem;
 `;

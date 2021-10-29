@@ -23,17 +23,17 @@ export const Inputs: React.FC = () => {
 
   return (
     <Wrapper>
-      <Input
+      <input
         type="number"
         placeholder="principal"
         onChange={(e) => setPrincipal(Number(e.target.value))}
       />
-      <Input
+      <input
         type="number"
         placeholder="rate (%)"
         onChange={(e) => setRate(Number(e.target.value))}
       />
-      <Input
+      <input
         type="number"
         placeholder="years"
         onChange={(e) => setYears(Number(e.target.value))}
@@ -48,4 +48,3 @@ const Wrapper = styled.div`
   flex-flow: wrap;
   gap: 5%;
 `;
-const Input = styled.input``;
